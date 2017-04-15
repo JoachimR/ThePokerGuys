@@ -1,15 +1,28 @@
-"The Poker Guys" Android App
+The Poker Guys Android App
 =======================
 
-This is the source code of the Android app that can be found in the play store:
+[DOWNLOAD APP](https://github.com/JoachimR/ThePokerGuys/raw/master/app-release_1.0.apk)
 
-[![Download from Google Play](http://www.android.com/images/brand/android_app_on_play_large.png "Download from Google Play")](https://play.google.com/store/apps/details?id=de.reiss.thepokerguys)
+***
 
-http://thepokerguys.net/
+In this repository the source code of the app is made public.
 
-http://www.youtube.com/channel/UCzdWmtdNFKd27AcUmwe4ZCA
+The app is developed for fun and research purposes. 
+If you have any suggestions feel free to contact me.
 
-http://twitter.com/2PokerGuys
+
+***
+
+
+[The Poker Guys Homepage](http://thepokerguys.net)
+
+[Youtube Channel](http://www.youtube.com/channel/UCzdWmtdNFKd27AcUmwe4ZCA)
+
+[Twitter](http://twitter.com/2PokerGuys)
+
+***
 
 # License
 Copyright (C) 2017 Joachim Reiß
+
+The license is GnuGPLv3. With contributing you agree to license your code under the same conditions.
