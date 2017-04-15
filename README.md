@@ -1,9 +1,13 @@
 The Poker Guys Android App
 =======================
 
-[DOWNLOAD APP](https://github.com/JoachimR/ThePokerGuys/raw/master/app-release_1.0.apk)
+
+![Logo](https://github.com/JoachimR/ThePokerGuys/raw/master/app/src/main/res/mipmap-xhdpi/ic_launcher.png)
+# [DOWNLOAD APP](https://github.com/JoachimR/ThePokerGuys/raw/master/app-release_1.0.apk)
+
 
 ***
+
 
 In this repository the source code of the app is made public.
 
