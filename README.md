@@ -12,12 +12,14 @@ The Poker Guys Android App
 In this repository the source code of the app is made public.
 
 The app is developed for fun and research purposes. 
-If you have any suggestions feel free to contact me.
+If you have any comments feel free to contact me.
 
 
 ***
 
-![Screenshot01](https://github.com/JoachimR/ThePokerGuys/raw/master/Screenshots/01.png) ![Screenshot02](https://github.com/JoachimR/ThePokerGuys/raw/master/Screenshots/02.png)
+![Screenshot01](https://github.com/JoachimR/ThePokerGuys/raw/master/Screenshots/01.png)
+
+![Screenshot02](https://github.com/JoachimR/ThePokerGuys/raw/master/Screenshots/02.png)
 ![Screenshot03](https://github.com/JoachimR/ThePokerGuys/raw/master/Screenshots/03.png)
 
 ***
