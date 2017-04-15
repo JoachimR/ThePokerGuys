@@ -2,7 +2,7 @@ package de.reiss.thepokerguys.util
 
 import android.util.Log
 
-private val TAG = "ThePokerGuysAAAAAA"
+private val TAG = "ThePokerGuys"
 
 fun logDebug(message: () -> String) {
     Log.d(TAG, message())
