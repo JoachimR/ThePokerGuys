@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name" translatable="false">The Poker Guys</string>
+    <string name="app_info_text" translatable="false">%1$s \n\n%2$s\n\n%3$s \n\n%4$s\n%5$s\n%6$s\n\n%7$s\n</string>
+    <string name="developer_prefix" translatable="false">Developer:</string>
+    <string name="developer" translatable="false">Joachim Reiß / Germany</string>
+    <string name="developer_mail" translatable="false">joareiss@gmail.com</string>
+    <string name="app_info_version">Version %s</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+    <string name="poker_hand_preflop_title">Preflop</string>
+    <string name="poker_hand_flop_title">Flop</string>
+    <string name="poker_hand_turn_title">Turn</string>
+    <string name="poker_hand_river_title">River</string>
+    <string name="poker_hand_result_title">Result</string>
+    <string name="poker_hand_blinds_ante_title">Ante:</string>
+    <string name="poker_hand_game_players_on_table_title">Players:</string>
+    <string name="poker_hand_blinds_small_blind_big_blind">%1$s/%2$s</string>
+    <string name="notification_button_go_back_title">-10s</string>
+    <string name="notification_button_play_title">Play</string>
+    <string name="notification_button_go_forward_title">+10s</string>
+    <string name="podcast_list_item_fragment_empty">No podcasts available</string>
+    <string name="podcast_detail_empty">Unable to load content</string>
+    <string name="podcast_detail_error_loading">Could not load podcast list</string>
+    <string name="podcast_detail_error_downloading">Could not download podcast list</string>
+    <string name="podcast_list_item_board_prefix">Board:</string>
+    <string name="rbtn_speed_2">2</string>
+    <string name="rbtn_speed_1_75">1.75</string>
+    <string name="rbtn_speed_1_5">1.5</string>
+    <string name="rbtn_speed_1_25">1.25</string>
+    <string name="rbtn_speed_1">1</string>
+    <string name="zeroTime">00:00:00</string>
+    <string name="notification_button_pause_title">Pause</string>
+    <string name="menu_action_share">Share</string>
+    <string name="error_playing_file">Can not play this file…</string>
+    <string name="report_bugs">If you find bugs or have a suggestion, tell me! :)</string>
+    <string name="info">You can use the app to download and play the podcasts produced by The Poker Guys.</string>
+    <string name="info_open_source">The code is available at github.com</string> <!--todo-->
+    <string name="file_not_found">File not found</string>
+    <string name="confirm_download_dialog_title">Confirm Download</string>
+    <string name="confirm_download_dialog_message">It seems that the device is currently not connected to a WiFi network.\n\nAre you sure you want to download this file using your mobile data connection?</string>
+    <string name="confirm_download_dialog_option_cancel">Cancel</string>
+    <string name="confirm_download_dialog_option_download">Download</string>
+    <string name="podcast_info_missing">Missing podcast info…</string>
+    <string name="already_downloading_file">Already downloading this file…</string>
+    <string name="downloading_files">Downloading Files…</string>
+    <string name="play_controls_start_download_file">Download Audio File</string>
+    <string name="play_controls_cancel_download_file">Cancel Download</string>
+    <string name="nav_website">Website</string>
+    <string name="nav_youtube">YouTube</string>
+    <string name="nav_twitter">Twitter</string>
+    <string name="nav_info">About the app</string>
+    <string name="nav_settings">Settings</string>
+    <string name="board_displayed">%1$s%2$s%3$s   %4$s   %5$s</string>
+    <string name="podcast_list_item_fragment_empty_swipe_down">Swipe down to refresh</string>
+    <string name="try_again">Try again</string>
+    <string name="can_not_access_download_directory">Can not access download directory</string>
+    <string name="settings_activity_title">Settings</string>
+    <string name="share_podcast_title">Share podcast</string>
+    <string name="share_podcast_message">Check out this podcast from The Poker Guys:\n\n%1$s\n\n%2$s</string>
+    <string name="toast_error_undo_deleting_file">Could not restore file</string>
+    <string name="undo">Undo</string>
+    <string name="deleted">Deleted \"%s\"</string>
+    <string name="toast_error_deleting_file">Not able to delete this file</string>
+    <string name="toast_error_restore_file">Could not restore this file</string>
+</resources>

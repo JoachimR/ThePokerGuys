@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MaximumContentWidth"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:showIn="@layout/play_activity">
+
+    <TextView
+        android:id="@+id/play_podcast_title"
+        style="@style/Base.TextAppearance.AppCompat.Headline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        tools:text="Some title Some title Some title Some tittle Some title Some title Some title Some title Some title Some title Some title zzzzz" />
+
+    <FrameLayout
+        android:id="@+id/play_controls_file_not_fully_downloaded_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        tools:visibility="visible">
+
+        <Button
+            android:id="@+id/play_controls_file_start_download"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/play_controls_start_download_file" />
+
+        <Button
+            android:id="@+id/play_controls_file_cancel_download"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/play_controls_cancel_download_file"
+            tools:visibility="gone" />
+
+    </FrameLayout>
+
+    <include layout="@layout/board" />
+
+    <TextView
+        android:id="@+id/play_podcast_publish_date"
+        style="@style/Base.TextAppearance.AppCompat.Subhead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        tools:text="Mar 22, 2017" />
+
+    <TextView
+        android:id="@+id/play_podcast_decription"
+        style="@style/Base.TextAppearance.AppCompat.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginTop="16dp"
+        android:autoLink="all"
+        tools:text="some description some description some description some description some description some description some description some description zzzzz" />
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Display Settings">
+
+        <ListPreference
+            android:defaultValue="@string/pref_card_style_entry_default_value"
+            android:entries="@array/pref_card_style_displayed"
+            android:entryValues="@array/pref_card_style_entries"
+            android:key="@string/pref_card_style_key"
+            android:summary="%s"
+            android:title="@string/pref_card_style_title" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Audio Settings">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/pref_noisy_aware_key"
+            android:summaryOff="@string/pref_noisy_aware_off"
+            android:summaryOn="@string/pref_noisy_aware_on"
+            android:title="@string/pref_noisy_aware_title" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Misc">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/pref_warn_no_wifi_key"
+            android:summaryOff="@string/pref_warn_no_wifi_off"
+            android:summaryOn="@string/pref_warn_no_wifi_on"
+            android:title="@string/pref_warn_no_wifi_title" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

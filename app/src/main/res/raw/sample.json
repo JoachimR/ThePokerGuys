@@ -1,0 +1,455 @@
+[
+  {
+    "ad": "For access to exclusive Poker Guys freerolls on Nitrogen Sports Poker Room, sign up using this link: nitrogensports.eu/r/632610",
+    "description": "Phil Ivey and Patrik Antonius play a massive pot in London.",
+    "mp3Url": "https://soundcloud.com/user-594538171/is-phil-ivey-this-good",
+    "pokerHand": {
+      "blinds": {
+        "ante": "$100",
+        "bigBlind": "$400",
+        "smallBlind": "$200"
+      },
+      "flop": {
+        "actions": [
+          "Phil Ivey bets $5000",
+          "Patrick Antonius calls",
+          "Tony G folds"
+        ],
+        "board": [
+          {
+            "rank": "Q",
+            "suit": "Spades"
+          },
+          {
+            "rank": "9",
+            "suit": "Spades"
+          },
+          {
+            "rank": "A",
+            "suit": "Clubs"
+          }
+        ],
+        "potBeforeActions": "$6,700"
+      },
+      "gameType": "Cash game",
+      "playersOnTable": 7,
+      "pokerPlayers": [
+        {
+          "chipsBeforeHand": "(very deep)",
+          "holeCards": [
+            {
+              "rank": "K",
+              "suit": "Diamonds"
+            },
+            {
+              "rank": "J",
+              "suit": "Spades"
+            }
+          ],
+          "isGarbageHuman": true,
+          "name": "Tony G",
+          "position": "HJ"
+        },
+        {
+          "chipsBeforeHand": "(very deep)",
+          "holeCards": [
+            {
+              "rank": "9",
+              "suit": "Diamonds"
+            },
+            {
+              "rank": "9",
+              "suit": "Clubs"
+            }
+          ],
+          "isGarbageHuman": false,
+          "name": "Phil Ivey",
+          "position": "SB"
+        },
+        {
+          "chipsBeforeHand": "(very deep)",
+          "holeCards": [
+            {
+              "rank": "A",
+              "suit": "Diamonds"
+            },
+            {
+              "rank": "4",
+              "suit": "Clubs"
+            }
+          ],
+          "isGarbageHuman": false,
+          "name": "Patrick Antonius",
+          "position": "BB"
+        }
+      ],
+      "preflop": {
+        "actions": [
+          "Tony G raises to $2000",
+          "Phil Ivey calls",
+          "Patrick Antonius calls"
+        ],
+        "potBeforeActions": "$1500"
+      },
+      "result": "Patrick Antonius wins $288,500",
+      "river": {
+        "actions": [
+          "Phil Ivey bets $40000",
+          "Patrick Antonius raises to $115,200",
+          "Phil Ivey calls"
+        ],
+        "board": [
+          {
+            "rank": "Q",
+            "suit": "Spades"
+          },
+          {
+            "rank": "9",
+            "suit": "Spades"
+          },
+          {
+            "rank": "A",
+            "suit": "Clubs"
+          },
+          {
+            "rank": "A",
+            "suit": "Spades"
+          },
+          {
+            "rank": "4",
+            "suit": "Hearts"
+          }
+        ],
+        "potBeforeActions": "$46,700"
+      },
+      "turn": {
+        "actions": [
+          "Phil Ivey bets $15000",
+          "Patrick Antonius calls"
+        ],
+        "board": [
+          {
+            "rank": "Q",
+            "suit": "Spades"
+          },
+          {
+            "rank": "9",
+            "suit": "Spades"
+          },
+          {
+            "rank": "A",
+            "suit": "Clubs"
+          },
+          {
+            "rank": "A",
+            "suit": "Spades"
+          }
+        ],
+        "potBeforeActions": "$16,700"
+      }
+    },
+    "title": "Is Phil Ivey THIS Good???"
+  },
+  {
+    "ad": "podcast_2_ad",
+    "description": "podcast_2_description",
+    "mp3Url": "https://soundcloud.com/user-594538171/podcast_2_ad",
+    "pokerHand": {
+      "blinds": {
+        "ante": "$111",
+        "bigBlind": "$222",
+        "smallBlind": "$333"
+      },
+      "flop": {
+        "actions": [
+          "podcast_2_ad",
+          "podcast_2_ad",
+          "podcast_2_ad"
+        ],
+        "board": [
+          {
+            "rank": "Q",
+            "suit": "Spades"
+          },
+          {
+            "rank": "9",
+            "suit": "Spades"
+          },
+          {
+            "rank": "A",
+            "suit": "Clubs"
+          }
+        ],
+        "potBeforeActions": "$6,700"
+      },
+      "gameType": "Cash game",
+      "playersOnTable": 7,
+      "pokerPlayers": [
+        {
+          "chipsBeforeHand": "(very deep)",
+          "holeCards": [
+            {
+              "rank": "K",
+              "suit": "Diamonds"
+            },
+            {
+              "rank": "J",
+              "suit": "Spades"
+            }
+          ],
+          "isGarbageHuman": true,
+          "name": "Tony G",
+          "position": "HJ"
+        },
+        {
+          "chipsBeforeHand": "(very deep)",
+          "holeCards": [
+            {
+              "rank": "9",
+              "suit": "Diamonds"
+            },
+            {
+              "rank": "9",
+              "suit": "Clubs"
+            }
+          ],
+          "isGarbageHuman": false,
+          "name": "Phil Ivey",
+          "position": "SB"
+        },
+        {
+          "chipsBeforeHand": "(very deep)",
+          "holeCards": [
+            {
+              "rank": "A",
+              "suit": "Diamonds"
+            },
+            {
+              "rank": "4",
+              "suit": "Clubs"
+            }
+          ],
+          "isGarbageHuman": false,
+          "name": "Patrick Antonius",
+          "position": "BB"
+        }
+      ],
+      "preflop": {
+        "actions": [
+          "Tony G raises to $2000",
+          "Phil Ivey calls",
+          "Patrick Antonius calls"
+        ],
+        "potBeforeActions": "$1500"
+      },
+      "result": "Patrick Antonius wins $288,500",
+      "river": {
+        "actions": [
+          "Phil Ivey bets $40000",
+          "Patrick Antonius raises to $115,200",
+          "Phil Ivey calls"
+        ],
+        "board": [
+          {
+            "rank": "Q",
+            "suit": "Spades"
+          },
+          {
+            "rank": "9",
+            "suit": "Spades"
+          },
+          {
+            "rank": "A",
+            "suit": "Clubs"
+          },
+          {
+            "rank": "A",
+            "suit": "Spades"
+          },
+          {
+            "rank": "4",
+            "suit": "Hearts"
+          }
+        ],
+        "potBeforeActions": "$46,700"
+      },
+      "turn": {
+        "actions": [
+          "Phil Ivey bets $15000",
+          "Patrick Antonius calls"
+        ],
+        "board": [
+          {
+            "rank": "Q",
+            "suit": "Spades"
+          },
+          {
+            "rank": "9",
+            "suit": "Spades"
+          },
+          {
+            "rank": "A",
+            "suit": "Clubs"
+          },
+          {
+            "rank": "A",
+            "suit": "Spades"
+          }
+        ],
+        "potBeforeActions": "$16,700"
+      }
+    },
+    "title": "podcast_2_Is Phil Ivey THIS Good???"
+  },
+  {
+    "ad": "podcast_3_ad",
+    "description": "podcast_3_description",
+    "mp3Url": "https://soundcloud.com/user-594538171/podcast_3_ad",
+    "pokerHand": {
+      "blinds": {
+        "ante": "$111",
+        "bigBlind": "$222",
+        "smallBlind": "$333"
+      },
+      "flop": {
+        "actions": [
+          "podcast_3_ad",
+          "podcast_3_ad",
+          "podcast_3_ad"
+        ],
+        "board": [
+          {
+            "rank": "Q",
+            "suit": "Spades"
+          },
+          {
+            "rank": "9",
+            "suit": "Spades"
+          },
+          {
+            "rank": "A",
+            "suit": "Clubs"
+          }
+        ],
+        "potBeforeActions": "$6,700"
+      },
+      "gameType": "Cash game",
+      "playersOnTable": 7,
+      "pokerPlayers": [
+        {
+          "chipsBeforeHand": "(very deep)",
+          "holeCards": [
+            {
+              "rank": "K",
+              "suit": "Diamonds"
+            },
+            {
+              "rank": "J",
+              "suit": "Spades"
+            }
+          ],
+          "isGarbageHuman": true,
+          "name": "Tony G",
+          "position": "HJ"
+        },
+        {
+          "chipsBeforeHand": "(very deep)",
+          "holeCards": [
+            {
+              "rank": "9",
+              "suit": "Diamonds"
+            },
+            {
+              "rank": "9",
+              "suit": "Clubs"
+            }
+          ],
+          "isGarbageHuman": false,
+          "name": "Phil Ivey",
+          "position": "SB"
+        },
+        {
+          "chipsBeforeHand": "(very deep)",
+          "holeCards": [
+            {
+              "rank": "A",
+              "suit": "Diamonds"
+            },
+            {
+              "rank": "4",
+              "suit": "Clubs"
+            }
+          ],
+          "isGarbageHuman": false,
+          "name": "Patrick Antonius",
+          "position": "BB"
+        }
+      ],
+      "preflop": {
+        "actions": [
+          "Tony G raises to $2000",
+          "Phil Ivey calls",
+          "Patrick Antonius calls"
+        ],
+        "potBeforeActions": "$1500"
+      },
+      "result": "Patrick Antonius wins $288,500",
+      "river": {
+        "actions": [
+          "Phil Ivey bets $40000",
+          "Patrick Antonius raises to $115,200",
+          "Phil Ivey calls"
+        ],
+        "board": [
+          {
+            "rank": "Q",
+            "suit": "Spades"
+          },
+          {
+            "rank": "9",
+            "suit": "Spades"
+          },
+          {
+            "rank": "A",
+            "suit": "Clubs"
+          },
+          {
+            "rank": "A",
+            "suit": "Spades"
+          },
+          {
+            "rank": "4",
+            "suit": "Hearts"
+          }
+        ],
+        "potBeforeActions": "$46,700"
+      },
+      "turn": {
+        "actions": [
+          "Phil Ivey bets $15000",
+          "Patrick Antonius calls"
+        ],
+        "board": [
+          {
+            "rank": "Q",
+            "suit": "Spades"
+          },
+          {
+            "rank": "9",
+            "suit": "Spades"
+          },
+          {
+            "rank": "A",
+            "suit": "Clubs"
+          },
+          {
+            "rank": "A",
+            "suit": "Spades"
+          }
+        ],
+        "potBeforeActions": "$16,700"
+      }
+    },
+    "title": "podcast_3_Is Phil Ivey THIS Good???"
+  }
+]

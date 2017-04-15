@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="84dp"
+    android:layout_gravity="center_horizontal"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    tools:ignore="NestedWeights,RtlSymmetry"
+    tools:showIn="@layout/board">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/play_podcast_board_flop_card_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/content_description_flop_card"
+            android:paddingEnd="1dp"
+            android:paddingRight="1dp"
+            tools:src="@drawable/card_simple_2c" />
+
+        <ImageView
+            android:id="@+id/play_podcast_board_flop_card_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/content_description_flop_card"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp"
+            tools:src="@drawable/card_classic_ac" />
+
+        <ImageView
+            android:id="@+id/play_podcast_board_flop_card_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/content_description_flop_card"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp"
+            tools:src="@drawable/card_classic_9h" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/play_podcast_board_turn_card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/content_description_turn_card"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp"
+            tools:src="@drawable/card_classic_5d" />
+
+        <ImageView
+            android:id="@+id/play_podcast_board_river_card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/content_description_river_card"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp"
+            tools:src="@drawable/card_classic_jd" />
+
+    </LinearLayout>
+
+</LinearLayout>

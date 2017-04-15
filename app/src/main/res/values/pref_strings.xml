@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="pref_card_style_key" translatable="false">pref_card_style_key</string>
+    <string name="pref_card_style_title">Card style</string>
+    <string name="pref_card_style_entry_classic" translatable="false">pref_card_style_entry_classic</string>
+    <string name="pref_card_style_entry_simple" translatable="false">pref_card_style_entry_simple</string>
+    <string name="pref_card_style_entry_default_value" translatable="false">@string/pref_card_style_entry_classic</string>
+    <string-array name="pref_card_style_entries" translatable="false">
+        <item translatable="false">@string/pref_card_style_entry_classic</item>
+        <item translatable="false">@string/pref_card_style_entry_simple</item>
+    </string-array>
+    <string-array name="pref_card_style_displayed">
+        <item>Classic</item>
+        <item>Simple</item>
+    </string-array>
+
+    <string name="pref_noisy_aware_key" translatable="false">pref_noisy_aware_key</string>
+    <string name="pref_noisy_aware_on">Pause on external audio event</string>
+    <string name="pref_noisy_aware_off">Ignore external audio events</string>
+    <string name="pref_noisy_aware_title">External audio awareness</string>
+
+    <string name="pref_warn_no_wifi_key" translatable="false">pref_warn_no_wifi_key</string>
+    <string name="pref_warn_no_wifi_on">Confirm download if not on WiFi</string>
+    <string name="pref_warn_no_wifi_off">Start download even if not on WiFi</string>
+    <string name="pref_warn_no_wifi_title">Download Confirmation</string>
+
+</resources>

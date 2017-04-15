@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/play_controls_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/md_grey_200">
+
+        <LinearLayout
+            style="@style/MaximumContentWidth"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/play_controls_file_fully_downloaded_root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:id="@+id/play_speed_buttons_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <RadioButton
+                        android:id="@+id/play_speed_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/rbtn_speed_1" />
+
+                    <RadioButton
+                        android:id="@+id/play_speed_1_25"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/rbtn_speed_1_25" />
+
+                    <RadioButton
+                        android:id="@+id/play_speed_1_5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/rbtn_speed_1_5" />
+
+                </RadioGroup>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/play_big_fab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="32dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="@string/content_description_btn_play_pause"
+                        app:backgroundTint="@color/color_primary"
+                        app:srcCompat="@drawable/ic_play_arrow_black_24dp" />
+
+                    <ImageView
+                        android:id="@+id/play_minus_10_sec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_toLeftOf="@id/play_big_fab"
+                        android:layout_toStartOf="@id/play_big_fab"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="@string/content_description_btn_minus_10_sec"
+                        android:padding="8dp"
+                        app:srcCompat="@drawable/ic_replay_10_black_24dp" />
+
+                    <ImageView
+                        android:id="@+id/play_plus_10_sec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_toEndOf="@+id/play_big_fab"
+                        android:layout_toRightOf="@+id/play_big_fab"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="@string/content_description_btn_minus_10_sec"
+                        android:padding="8dp"
+                        app:srcCompat="@drawable/ic_forward_10_black_24dp" />
+
+
+                    <TextView
+                        android:id="@+id/play_time_current"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/play_minus_10_sec"
+                        android:layout_toStartOf="@id/play_minus_10_sec"
+                        android:text="@string/zeroTime" />
+
+                    <TextView
+                        android:id="@+id/play_time_max"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/play_time_max"
+                        android:layout_toRightOf="@id/play_time_max"
+                        android:text="@string/zeroTime" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@id/play_controls_root"
+        android:background="@drawable/shadow_above" />
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/play_details_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/play_controls_root">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/play_appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/play_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?actionBarSize">
+
+            <de.reiss.thepokerguys.util.view.TestableProgressBar
+                android:id="@+id/play_podcast_root_loading"
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp" />
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/play_podcast_root_loaded"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:ignore="UnusedAttribute">
+
+                <include layout="@layout/play_podcast_loaded" />
+
+            </android.support.v4.widget.NestedScrollView>
+
+        </FrameLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <FrameLayout
+        android:id="@+id/play_seek_bar_root"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@id/play_controls_root"
+        android:layout_alignBottom="@id/play_details_root"
+        android:layout_marginBottom="-20dp">
+
+        <SeekBar
+            android:id="@+id/play_seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" />
+
+    </FrameLayout>
+
+</RelativeLayout>

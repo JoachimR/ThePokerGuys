@@ -1,0 +1,16 @@
+<resources>
+    <string name="content_description_poker_hand_flop_show_or_hide">Show or hide flop</string>
+    <string name="content_description_poker_hand_turn_show_or_hide">Show or hide turn</string>
+    <string name="content_description_poker_hand_river_show_or_hide">Show or hide river</string>
+    <string name="content_description_poker_hand_result_show_or_hide">Show or hide result</string>
+    <string name="content_description_podcast_list_item_image_new_icon">New podcast</string>
+    <string name="content_description_btn_play_pause">Play or pause</string>
+    <string name="content_description_btn_minus_10_sec">10 seconds back</string>
+    <string name="content_description_flop_card">Flop card</string>
+    <string name="content_description_turn_card">Turn card</string>
+    <string name="content_description_river_card">River card</string>
+    <string name="content_description_side_nav_bar_header_image">App Logo</string>
+    <string name="content_description_podcast_list_fragment_empty_swipe_down">Swipe down</string>
+    <string name="content_description_podcast_list_item_download_icon">Download</string>
+    <string name="content_description_main_play_or_pause">Pause or play current file</string>
+</resources>
