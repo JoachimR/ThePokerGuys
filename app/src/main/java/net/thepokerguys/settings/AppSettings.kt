@@ -7,6 +7,8 @@ import net.thepokerguys.R
 
 open class AppSettings constructor(val context: Context) {
 
+    private val PREF_KEY_LAST_KNOWN_LATEST_PODCAST = "PREF_KEY_LAST_KNOWN_LATEST_PODCAST"
+
     open fun getSettings(): SharedPreferences {
         return PreferenceManager.getDefaultSharedPreferences(context);
     }
@@ -30,6 +32,17 @@ open class AppSettings constructor(val context: Context) {
     open fun shouldNotifyNewPodcast(): Boolean {
         return getSettings().getBoolean(
                 context.getString(R.string.pref_notify_new_podcast_key), true)
+    }
+
+    open fun getLastKnownLatestPodcastURL(): String {
+        return getSettings().getString(PREF_KEY_LAST_KNOWN_LATEST_PODCAST, "")
+    }
+
+    open fun setLastKnownLatestPodcastURL(url: String) {
+        getSettings()
+                .edit()
+                .putString(PREF_KEY_LAST_KNOWN_LATEST_PODCAST, url)
+                .apply()
     }
 
 }

@@ -7,9 +7,6 @@ import android.content.Intent
 import android.content.ServiceConnection
 import android.content.pm.PackageManager
 import android.os.IBinder
-import com.google.android.gms.gcm.GcmNetworkManager
-import com.google.android.gms.gcm.PeriodicTask
-import com.google.android.gms.gcm.Task
 import net.thepokerguys.audio.AudioPlayerService
 import net.thepokerguys.database.DbProxy
 import net.thepokerguys.delete.DeleteFileHelper
@@ -29,7 +26,7 @@ open class App : Application() {
         bindToAudioPlayService()
         init()
 
-        scheduleDailyRssLookup()
+        NotifyNewPodcastGcmService.scheduleDaily(this)
     }
 
     open fun init() {
@@ -96,17 +93,6 @@ open class App : Application() {
                 AudioPlayerService.instance?.stopSelf()
             }
         }, Context.BIND_AUTO_CREATE)
-    }
-
-    private fun scheduleDailyRssLookup() {
-        GcmNetworkManager.getInstance(this)
-                .schedule(PeriodicTask.Builder()
-                        .setService(NotifyNewPodcastGcmService::class.java)
-                        .setRequiredNetwork(Task.NETWORK_STATE_CONNECTED)
-                        .setTag("RefreshRss")
-                        .setPeriod(30) // TODO 86400
-                        .setFlex(10) // TODO 3600
-                        .build())
     }
 
     val appInfo: String

@@ -6,10 +6,8 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.BitmapFactory
 import android.support.v7.app.NotificationCompat
-import com.google.android.gms.gcm.GcmNetworkManager.RESULT_FAILURE
+import com.google.android.gms.gcm.*
 import com.google.android.gms.gcm.GcmNetworkManager.RESULT_SUCCESS
-import com.google.android.gms.gcm.GcmTaskService
-import com.google.android.gms.gcm.TaskParams
 import net.thepokerguys.MainActivity
 import net.thepokerguys.R
 import net.thepokerguys.database.PodcastDatabaseItem
@@ -24,24 +22,41 @@ import rx.Observable
 import rx.Subscription
 import java.util.*
 
+/**
+ * https://www.bignerdranch.com/blog/optimize-battery-life-with-androids-gcm-network-manager/
+ */
 class NotifyNewPodcastGcmService : GcmTaskService() {
+
+    companion object {
+
+        fun scheduleDaily(context: Context) {
+            GcmNetworkManager.getInstance(context)
+                    .schedule(PeriodicTask.Builder()
+                            .setService(NotifyNewPodcastGcmService::class.java)
+                            .setRequiredNetwork(Task.NETWORK_STATE_CONNECTED)
+                            .setTag("RefreshRss")
+                            .setPeriod(86400)
+                            .setFlex(3600)
+                            .build())
+        }
+
+    }
 
     private var downloadSubscription: Subscription? = null
 
     override fun onRunTask(taskParams: TaskParams): Int {
-        if (AppSettings(this).shouldNotifyNewPodcast().not()) {
-            return RESULT_SUCCESS
+        if (AppSettings(this).shouldNotifyNewPodcast()) {
+            logInfo { "About to download latest rss item" }
+            refreshRss()
         }
-
-        logInfo { "About to download latest rss item" }
-        return if (refreshRss()) RESULT_SUCCESS else RESULT_FAILURE
+        return RESULT_SUCCESS // low priority, so avoid rescheduling by returning success in any case
     }
 
-    private fun refreshRss(): Boolean {
+    private fun refreshRss() {
         downloadSubscription?.let {
             if (!it.isUnsubscribed) {
                 logInfo { "Already downloading latest RSS item, skipping this time" }
-                return true
+                return
             }
         }
 
@@ -51,14 +66,12 @@ class NotifyNewPodcastGcmService : GcmTaskService() {
                     if (latestItem == null) {
                         logInfo { "No latest RSS item found" }
                     } else {
-                        logInfo { "Download and parsed latest RSS item successfully" }
-                        showNotification(latestItem)
+                        logInfo { "Downloaded and parsed latest RSS item successfully" }
+                        handleLatestItem(latestItem)
                     }
                 }, { error ->
                     logWarn(error) { "Could not download and parse latest RSS item successfully" }
                 })
-
-        return false
     }
 
     private fun downloadLatestItem(): Observable<PodcastDatabaseItem?> {
@@ -74,12 +87,22 @@ class NotifyNewPodcastGcmService : GcmTaskService() {
         }
     }
 
-    private fun showNotification(latestItem: PodcastDatabaseItem) {
-        if (latestItem.title.isEmpty()) {
-            logInfo { "Latest RSS item has no title, skipping the notification display" }
+    private fun handleLatestItem(latestPodcast: PodcastDatabaseItem) {
+        val appSettings = AppSettings(this)
+
+        if (appSettings.getLastKnownLatestPodcastURL() == latestPodcast.url) {
+            logInfo {
+                "Latest RSS item has already been displayed once"
+            }
         } else {
-            NotificationHelper.show(this, NotificationCategory.NewPodcast,
-                    createNotification(this, latestItem))
+            appSettings.setLastKnownLatestPodcastURL(latestPodcast.url)
+
+            if (latestPodcast.title.isEmpty()) {
+                logInfo { "Latest RSS item has no title (?)" }
+            } else {
+                NotificationHelper.show(this, NotificationCategory.NewPodcast,
+                        createNotification(this, latestPodcast))
+            }
         }
     }
 
