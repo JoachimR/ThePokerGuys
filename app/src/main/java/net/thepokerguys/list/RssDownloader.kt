@@ -15,12 +15,17 @@ import java.util.*
 
 open class RssDownloader(val context: Context) {
 
+    /**
+     * Download the RSS file that contains the podcast items
+     *
+     * @param amountOfItems the amount of items to download and parse. 0 means unlimited amount of items
+     */
     @WorkerThread
-    open fun execute(): List<PodcastDatabaseItem> {
+    open fun execute(amountOfItems: Int = 0): List<PodcastDatabaseItem> {
         val result = ArrayList<PodcastDatabaseItem>()
         try {
             val inputStream = URL(RSS_FEED_SOUNDCLOUD_URL).openConnection().getInputStream()
-            val feed = EarlParser.parseOrThrow(inputStream, 0) // 0 means unlimited amount of items
+            val feed = EarlParser.parseOrThrow(inputStream, amountOfItems)
             for (item in feed.items) {
                 val podcastItem = createPodcastDatabaseItem(item)
                 if (podcastItem != null) {

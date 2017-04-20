@@ -19,8 +19,8 @@ import net.thepokerguys.util.*
 
 class ListItemViewHolder(itemView: View, var appActivity: AppActivity) : RecyclerView.ViewHolder(itemView) {
 
-    private val colorSetToFile = ContextCompat.getColor(appActivity, R.color.color_primary)
-    private val colorFullyDownloaded = ContextCompat.getColor(appActivity, R.color.color_primary_opacity_20)
+    private val colorSetToFile = ContextCompat.getColor(appActivity, R.color.color_primary_opacity_127)
+    private val colorFullyDownloaded = ContextCompat.getColor(appActivity, R.color.color_primary_opacity_10)
     private val colorNotDownloaded = ContextCompat.getColor(appActivity, R.color.md_white_1000)
 
     var listItem: ListItem? = null

@@ -64,4 +64,5 @@
     <string name="deleted">Deleted \"%s\"</string>
     <string name="toast_error_deleting_file">Not able to delete this file</string>
     <string name="toast_error_restore_file">Could not restore this file</string>
+    <string name="notification_new_podcast_title">New The Poker Guys podcast</string>
 </resources>

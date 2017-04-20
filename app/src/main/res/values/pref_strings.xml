@@ -23,6 +23,11 @@
     <string name="pref_warn_no_wifi_key" translatable="false">pref_warn_no_wifi_key</string>
     <string name="pref_warn_no_wifi_on">Confirm download if not on WiFi</string>
     <string name="pref_warn_no_wifi_off">Start download even if not on WiFi</string>
-    <string name="pref_warn_no_wifi_title">Download Confirmation</string>
+    <string name="pref_warn_no_wifi_title">Download confirmation</string>
+
+    <string name="pref_notify_new_podcast_key" translatable="false">pref_notify_new_podcast_key</string>
+    <string name="pref_notify_new_podcast_on">Show new podcast notification</string>
+    <string name="pref_notify_new_podcast_off">Do not check for new podcasts</string>
+    <string name="pref_notify_new_podcast_title">Notify on new podcast</string>
 
 </resources>

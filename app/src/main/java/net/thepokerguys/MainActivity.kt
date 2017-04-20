@@ -1,5 +1,6 @@
 package net.thepokerguys
 
+import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -16,6 +17,7 @@ import android.view.MenuItem
 import android.view.MotionEvent
 import android.widget.ImageView
 import android.widget.TextView
+import kotlinx.android.synthetic.main.main_activity.*
 import net.thepokerguys.audio.AudioPlayerService
 import net.thepokerguys.eventbus.AppEventBus
 import net.thepokerguys.eventbus.DownloadConfirmed
@@ -24,10 +26,17 @@ import net.thepokerguys.list.PodcastListFragment
 import net.thepokerguys.settings.SettingsActivity
 import net.thepokerguys.util.showDialogFragment
 import net.thepokerguys.util.trueAsVisible
-import kotlinx.android.synthetic.main.main_activity.*
 import org.greenrobot.eventbus.Subscribe
 
 class MainActivity : AppActivity(), NavigationView.OnNavigationItemSelectedListener {
+
+    companion object {
+
+        fun createIntent(context: Context): Intent {
+            return Intent(context, MainActivity::class.java)
+        }
+
+    }
 
     private lateinit var playOrPause: ImageView
 

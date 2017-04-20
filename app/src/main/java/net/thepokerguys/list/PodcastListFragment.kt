@@ -9,13 +9,13 @@ import android.view.View
 import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.view.ViewGroup
+import kotlinx.android.synthetic.main.podcast_list_fragment.*
 import net.thepokerguys.AppActivity
 import net.thepokerguys.AppFragment
 import net.thepokerguys.R
 import net.thepokerguys.eventbus.AppEventBus
 import net.thepokerguys.eventbus.PlayButtonStateChanged
 import net.thepokerguys.util.FragmentUtil.initPresenter
-import kotlinx.android.synthetic.main.podcast_list_fragment.*
 
 
 class PodcastListFragment : AppFragment(), PodcastList.View {

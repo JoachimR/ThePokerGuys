@@ -217,9 +217,14 @@ open class PodcastListPresenter : AppRxFragment(), PodcastList.Presenter {
             try {
                 val podcastItems = rssDownloader().execute()
 
+                if (podcastItems.isNotEmpty()) {
+                    appSettings().setLastKnownLatestPodcastURL(podcastItems[0].url)
+                }
+
                 dbProxy().insertOrUpdatePodcasts(
                         podcastItems = podcastItems,
                         keepPlayProgress = true)
+
                 it.onNext(null)
                 it.onCompleted()
             } catch (e: Exception) {

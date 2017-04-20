@@ -10,6 +10,10 @@ import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View.*
+import kotlinx.android.synthetic.main.board.*
+import kotlinx.android.synthetic.main.board_cards.*
+import kotlinx.android.synthetic.main.play_activity.*
+import kotlinx.android.synthetic.main.play_podcast_loaded.*
 import net.thepokerguys.AppActivity
 import net.thepokerguys.R
 import net.thepokerguys.board.Board
@@ -18,10 +22,6 @@ import net.thepokerguys.board.Card
 import net.thepokerguys.database.PodcastDatabaseItem
 import net.thepokerguys.settings.DisplayedCardStyle
 import net.thepokerguys.util.*
-import kotlinx.android.synthetic.main.board.*
-import kotlinx.android.synthetic.main.board_cards.*
-import kotlinx.android.synthetic.main.play_activity.*
-import kotlinx.android.synthetic.main.play_podcast_loaded.*
 
 class PlayActivity : AppActivity(), Play.View {
 

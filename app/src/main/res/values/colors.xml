@@ -8,5 +8,6 @@
     <color name="white">#FFFFFF</color>
     <color name="black_opac">#80000000</color>
 
-    <color name="color_primary_opacity_20">#1400bffe</color>
+    <color name="color_primary_opacity_127">#7f00bffe</color>
+    <color name="color_primary_opacity_10">#0a00bffe</color>
 </resources>

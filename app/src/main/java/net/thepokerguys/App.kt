@@ -12,6 +12,7 @@ import net.thepokerguys.database.DbProxy
 import net.thepokerguys.delete.DeleteFileHelper
 import net.thepokerguys.download.DownloadManagerHelper
 import net.thepokerguys.list.RssDownloader
+import net.thepokerguys.scheduler.NotifyNewPodcastGcmService
 import net.thepokerguys.settings.AppSettings
 import net.thepokerguys.util.logWarn
 
@@ -24,6 +25,8 @@ open class App : Application() {
         super.onCreate()
         bindToAudioPlayService()
         init()
+
+        NotifyNewPodcastGcmService.scheduleDaily(this)
     }
 
     open fun init() {

@@ -32,6 +32,13 @@
             android:summaryOn="@string/pref_warn_no_wifi_on"
             android:title="@string/pref_warn_no_wifi_title" />
 
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/pref_notify_new_podcast_key"
+            android:summaryOff="@string/pref_notify_new_podcast_off"
+            android:summaryOn="@string/pref_notify_new_podcast_on"
+            android:title="@string/pref_notify_new_podcast_title" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
