@@ -20,6 +20,16 @@ import android.text.Spanned
 import android.util.Pair
 import android.view.View
 import android.widget.ImageView
+import com.google.android.gms.common.ConnectionResult
+import com.google.android.gms.common.GoogleApiAvailability
+
+fun Context.checkIfGooglePlayServicesInstalled(): Boolean {
+    val instance = GoogleApiAvailability.getInstance()
+    if (instance != null) {
+        return instance.isGooglePlayServicesAvailable(this) == ConnectionResult.SUCCESS
+    }
+    return false
+}
 
 fun isConnectedToWiFi(context: Context): Boolean {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {

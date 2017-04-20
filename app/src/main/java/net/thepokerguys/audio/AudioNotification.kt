@@ -1,6 +1,5 @@
 package net.thepokerguys.audio
 
-import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
@@ -9,15 +8,17 @@ import android.support.v7.app.NotificationCompat
 import net.thepokerguys.R
 import net.thepokerguys.board.BoardFinder
 import net.thepokerguys.database.PodcastDatabaseItem
+import net.thepokerguys.notifications.NotificationCategory
+import net.thepokerguys.notifications.NotificationHelper
 import net.thepokerguys.play.GoForwardOrBackwardReceiver
 import net.thepokerguys.play.PlayActivity
 import net.thepokerguys.play.StartPlayingReceiver
 import java.util.*
 
-private val NOTIFICATION_ID = 33
-
 fun startAudioForegroundNotification(service: AudioPlayerService, podcastDatabaseItem: PodcastDatabaseItem) {
-    service.startForeground(NOTIFICATION_ID,
+
+    NotificationHelper.startForeground(service, NotificationCategory.Audio,
+
             createBuilder(service, podcastDatabaseItem)
 
                     .addAction(R.drawable.ic_fast_rewind,
@@ -36,7 +37,9 @@ fun startAudioForegroundNotification(service: AudioPlayerService, podcastDatabas
 }
 
 fun showAudioPausedNotification(context: Context, podcastDatabaseItem: PodcastDatabaseItem) {
-    notificationManager(context).notify(NOTIFICATION_ID,
+
+    NotificationHelper.show(context, NotificationCategory.Audio,
+
             createBuilder(context, podcastDatabaseItem)
 
                     .addAction(R.drawable.ic_fast_rewind,
@@ -56,7 +59,7 @@ fun showAudioPausedNotification(context: Context, podcastDatabaseItem: PodcastDa
 }
 
 fun cancelPausedNotification(context: Context) {
-    notificationManager(context).cancel(NOTIFICATION_ID)
+    NotificationHelper.cancel(context, NotificationCategory.Audio)
 }
 
 private fun createBuilder(context: Context, podcastDatabaseItem: PodcastDatabaseItem)
@@ -90,9 +93,6 @@ private fun createBuilder(context: Context, podcastDatabaseItem: PodcastDatabase
 
             as NotificationCompat.Builder
 }
-
-private fun notificationManager(context: Context) =
-        (context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager)
 
 private fun pendingIntent(context: Context, url: String): PendingIntent? {
     val uniqueRequestCode = Random().nextInt(100)
