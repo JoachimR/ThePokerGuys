@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="de.reiss.thepokerguys">
+    package="net.thepokerguys">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -56,7 +56,7 @@
             android:label="@string/settings_activity_title"
             android:theme="@style/AppTheme.NoActionBar" />
 
-        <service android:name="de.reiss.thepokerguys.audio.AudioPlayerService" />
+        <service android:name=".audio.AudioPlayerService" />
 
         <receiver android:name=".play.StartPlayingReceiver" />
         <receiver android:name=".play.GoForwardOrBackwardReceiver" />

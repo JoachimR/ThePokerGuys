@@ -164,7 +164,7 @@
             android:layout_height="match_parent"
             android:layout_marginTop="?actionBarSize">
 
-            <de.reiss.thepokerguys.util.view.TestableProgressBar
+            <net.thepokerguys.util.view.TestableProgressBar
                 android:id="@+id/play_podcast_root_loading"
                 style="@style/Widget.AppCompat.ProgressBar"
                 android:layout_width="wrap_content"
