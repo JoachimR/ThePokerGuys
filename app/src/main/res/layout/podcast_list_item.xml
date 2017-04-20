@@ -55,10 +55,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:contentDescription="@string/content_description_podcast_list_item_image_new_icon"
+                   android:contentDescription="@string/content_description_podcast_list_item_image_new_icon"
                     android:tint="@color/color_accent"
-                    app:srcCompat="@drawable/ic_fiber_new_black_24dp" />
+                    app:srcCompat="@drawable/ic_new_releases_black_24dp" />
 
                 <ImageView
                     android:id="@+id/podcast_list_item_image_download_icon"
