@@ -3,11 +3,11 @@ package net.thepokerguys.settings
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import net.thepokerguys.R
 import kotlinx.android.synthetic.main.settings_activity.*
+import net.thepokerguys.AppActivity
+import net.thepokerguys.R
 
-class SettingsActivity : AppCompatActivity() {
+class SettingsActivity : AppActivity() {
 
     companion object {
 
