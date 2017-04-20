@@ -3,7 +3,8 @@ The Poker Guys Android App
 
 
 ![Logo](https://github.com/JoachimR/ThePokerGuys/raw/master/app/src/main/res/mipmap-xhdpi/ic_launcher.png)
-# [DOWNLOAD APP](https://github.com/JoachimR/ThePokerGuys/raw/master/app-release_1.0.apk)
+
+[![Download from Google Play](http://www.android.com/images/brand/android_app_on_play_large.png "Download from Google Play")](https://play.google.com/store/apps/details?id=net.pokerguys)
 
 
 ***
@@ -26,7 +27,7 @@ Technologies used:
 ***
 
 ![Screenshot01](https://github.com/JoachimR/ThePokerGuys/raw/master/Screenshots/01.png) ![Screenshot02](https://github.com/JoachimR/ThePokerGuys/raw/master/Screenshots/02.png)
-![Screenshot03](https://github.com/JoachimR/ThePokerGuys/raw/master/Screenshots/03.png)
+![Screenshot03](https://github.com/JoachimR/ThePokerGuys/raw/master/Screenshots/03.png) ![Screenshot04](https://github.com/JoachimR/ThePokerGuys/raw/master/Screenshots/04.png)
 
 ***
 
