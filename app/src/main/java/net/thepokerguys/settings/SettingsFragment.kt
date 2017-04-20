@@ -29,8 +29,7 @@ class SettingsFragment : PreferenceFragment() {
         }
 
         if (enable.not()) {
-            val preferences = AppSettings(activity)
-            val editor = preferences.getSettings().edit()
+            val editor = AppSettings(activity).getSettings().edit()
             editor.putBoolean(getString(R.string.pref_notify_new_podcast_key), false)
             editor.apply()
         }
