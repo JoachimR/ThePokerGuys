@@ -5,6 +5,7 @@ The Poker Guys Android App
 ![Logo](https://github.com/JoachimR/ThePokerGuys/raw/master/app/src/main/res/mipmap-xhdpi/ic_launcher.png)
 
 # [Download app](https://github.com/JoachimR/ThePokerGuys/raw/master/app-release.apk)
+[click here if you have troubles installing the app](http://www.android.pk/blog/tutorials/how-to-enable-third-party-apps-installation-on-android-phones/)
 ***
 
 
