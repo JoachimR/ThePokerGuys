@@ -45,10 +45,10 @@ class MainActivity : AppActivity(), NavigationView.OnNavigationItemSelectedListe
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
-        val toolbar = findViewById(R.id.main_toolbar) as Toolbar
+        val toolbar = findViewById<Toolbar>(R.id.main_toolbar)
         setSupportActionBar(toolbar)
 
-        playOrPause = findViewById(R.id.main_play_or_pause) as ImageView
+        playOrPause = findViewById<ImageView>(R.id.main_play_or_pause)
         playOrPause.setOnClickListener {
             AudioPlayerService.instance?.playOrPausePodcast()
         }
@@ -62,7 +62,7 @@ class MainActivity : AppActivity(), NavigationView.OnNavigationItemSelectedListe
     }
 
     private fun setupNavDrawer(toolbar: Toolbar) {
-        val drawer = findViewById(R.id.drawer_layout) as DrawerLayout
+        val drawer = findViewById<DrawerLayout>(R.id.drawer_layout)
         val toggle = ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
         @Suppress("DEPRECATION")
@@ -70,7 +70,7 @@ class MainActivity : AppActivity(), NavigationView.OnNavigationItemSelectedListe
         toggle.syncState()
 
         (main_nav_view.getHeaderView(0)
-                .findViewById(R.id.main_nav_view_header_version) as TextView)
+                .findViewById<TextView>(R.id.main_nav_view_header_version))
                 .text = app().formattedAppVersion
 
         main_nav_view.setNavigationItemSelectedListener(this)
@@ -119,13 +119,8 @@ class MainActivity : AppActivity(), NavigationView.OnNavigationItemSelectedListe
         transaction.commit()
     }
 
-    override fun onNewIntent(intent: Intent?) {
-        super.onNewIntent(intent)
-        println("AAAAAAAA" + intent?.dataString) // TODO
-    }
-
     override fun onBackPressed() {
-        val drawer = findViewById(R.id.drawer_layout) as DrawerLayout
+        val drawer = findViewById<DrawerLayout>(R.id.drawer_layout)
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START)
         } else {
@@ -156,7 +151,7 @@ class MainActivity : AppActivity(), NavigationView.OnNavigationItemSelectedListe
             }
         }
 
-        val drawer = findViewById(R.id.drawer_layout) as DrawerLayout
+        val drawer = findViewById<DrawerLayout>(R.id.drawer_layout)
         drawer.closeDrawer(GravityCompat.START)
         return true
     }

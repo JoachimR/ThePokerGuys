@@ -4,7 +4,7 @@ import com.trello.rxlifecycle.components.support.RxFragment
 
 abstract class AppRxFragment : RxFragment(), AppSingletons {
 
-    protected fun app() = (context.applicationContext as App)
+    protected fun app() = (context?.applicationContext as App)
 
     override fun appSettings() = app().appSingletons.appSettings()
 

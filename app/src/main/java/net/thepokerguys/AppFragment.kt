@@ -4,7 +4,7 @@ import android.support.v4.app.Fragment
 
 abstract class AppFragment : Fragment(), AppSingletons {
 
-    protected fun app() = (context.applicationContext as App)
+    protected fun app() = (context?.applicationContext as App)
 
     override fun appSettings() = app().appSingletons.appSettings()
 

@@ -32,12 +32,12 @@ class ConfirmDownloadDialog : DialogFragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        this.url = arguments.getString(KEY_URL)
-        this.name = arguments.getString(KEY_FILE_NAME)
+        this.url = arguments!!.getString(KEY_URL)
+        this.name = arguments!!.getString(KEY_FILE_NAME)
     }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        activity.let {
+        activity!!.let {
             return AlertDialog.Builder(it)
                     .setTitle(R.string.confirm_download_dialog_title)
                     .setMessage(R.string.confirm_download_dialog_message)

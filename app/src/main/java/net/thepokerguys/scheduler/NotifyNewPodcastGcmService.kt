@@ -5,7 +5,7 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.graphics.BitmapFactory
-import android.support.v7.app.NotificationCompat
+import android.support.v4.app.NotificationCompat
 import com.google.android.gms.gcm.*
 import com.google.android.gms.gcm.GcmNetworkManager.RESULT_SUCCESS
 import net.thepokerguys.MainActivity

@@ -23,20 +23,20 @@ class ListItemViewHolder(itemView: View, var appActivity: AppActivity) : Recycle
     private val colorFullyDownloaded = ContextCompat.getColor(appActivity, R.color.color_primary_opacity_10)
     private val colorNotDownloaded = ContextCompat.getColor(appActivity, R.color.md_white_1000)
 
-    var listItem: ListItem? = null
+    private var listItem: ListItem? = null
 
-    var title = itemView.findViewById(R.id.podcast_list_item_title) as TextView
-    var publishDate = itemView.findViewById(R.id.podcast_list_item_publish_date) as TextView
-    var newPodcastIcon = itemView.findViewById(R.id.podcast_list_item_image_new_icon) as ImageView
-    var icon = itemView.findViewById(R.id.podcast_list_item_image_download_icon) as ImageView
+    var title = itemView.findViewById<TextView>(R.id.podcast_list_item_title)
+    var publishDate = itemView.findViewById<TextView>(R.id.podcast_list_item_publish_date)
+    var newPodcastIcon = itemView.findViewById<ImageView>(R.id.podcast_list_item_image_new_icon)
+    var icon = itemView.findViewById<ImageView>(R.id.podcast_list_item_image_download_icon)
 
-    var root: View = itemView.findViewById(R.id.podcast_list_item_root)
-    var contentRoot: View = itemView.findViewById(R.id.podcast_list_item_content_root)
+    var root = itemView.findViewById<View>(R.id.podcast_list_item_root)
+    var contentRoot = itemView.findViewById<View>(R.id.podcast_list_item_content_root)
 
-    var timeRoot: View = itemView.findViewById(R.id.podcast_list_item_time_root)
-    var leftTime = itemView.findViewById(R.id.podcast_list_item_left_time) as TextView
-    var rightTime = itemView.findViewById(R.id.podcast_list_item_right_time) as TextView
-    var progressBar = itemView.findViewById(R.id.podcast_list_item_progress_bar) as ProgressBar
+    var timeRoot = itemView.findViewById<View>(R.id.podcast_list_item_time_root)
+    var leftTime = itemView.findViewById<TextView>(R.id.podcast_list_item_left_time)
+    var rightTime = itemView.findViewById<TextView>(R.id.podcast_list_item_right_time)
+    var progressBar = itemView.findViewById<ProgressBar>(R.id.podcast_list_item_progress_bar)
 
     var divider: View = itemView.findViewById(R.id.podcast_list_item_bottom_divider)
 

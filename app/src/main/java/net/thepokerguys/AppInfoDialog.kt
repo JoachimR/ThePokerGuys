@@ -10,9 +10,9 @@ import android.widget.TextView
 class AppInfoDialog : DialogFragment() {
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        return AlertDialog.Builder(activity)
-                .setTitle(activity.getString(R.string.app_name))
-                .setMessage((activity.application as App).appInfo)
+        return AlertDialog.Builder(activity!!)
+                .setTitle(activity!!.getString(R.string.app_name))
+                .setMessage((activity!!.application as App).appInfo)
                 .setIcon(R.mipmap.ic_launcher)
                 .setPositiveButton(android.R.string.ok, null)
                 .create()
@@ -20,7 +20,7 @@ class AppInfoDialog : DialogFragment() {
 
     override fun onStart() {
         super.onStart()
-        Linkify.addLinks(dialog.findViewById(android.R.id.message) as TextView, Linkify.ALL)
+        Linkify.addLinks(dialog.findViewById<TextView>(android.R.id.message), Linkify.ALL)
     }
 
 }

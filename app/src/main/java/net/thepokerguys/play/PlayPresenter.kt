@@ -59,8 +59,8 @@ class PlayPresenter : AppRxFragment(), Play.Presenter {
         retainInstance = true
     }
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        setPodcastFromDatabase(arguments.getString(KEY_PODCAST_URL))
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        setPodcastFromDatabase(arguments!!.getString(KEY_PODCAST_URL))
         return super.onCreateView(inflater, container, savedInstanceState)
     }
 
@@ -91,7 +91,7 @@ class PlayPresenter : AppRxFragment(), Play.Presenter {
         AppEventBus.register(this)
 
         if (AudioPlayerService.instance == null) {
-            (activity.application as App).bindToAudioPlayService()
+            (activity!!.application as App).bindToAudioPlayService()
         }
 
         refreshModelInView()
@@ -147,7 +147,7 @@ class PlayPresenter : AppRxFragment(), Play.Presenter {
 
             if (downloadAlreadyConfirmed
                     || appSettings().shouldWarnWhenNoWifi().not()
-                    || isConnectedToWiFi(context)) {
+                    || isConnectedToWiFi(context!!)) {
                 downloadManagerHelper().startNewDownloadRequest(podcast.url)
             } else {
                 activity?.showDialogFragment(ConfirmDownloadDialog.createInstance(

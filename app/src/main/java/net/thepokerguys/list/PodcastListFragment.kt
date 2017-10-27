@@ -26,13 +26,13 @@ class PodcastListFragment : AppFragment(), PodcastList.View {
     private var errorLoadingSnackbar: Snackbar? = null
     private var errorDownloadingSnackbar: Snackbar? = null
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater!!.inflate(R.layout.podcast_list_fragment, container, false)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        val view = inflater.inflate(R.layout.podcast_list_fragment, container, false)
         setHasOptionsMenu(true)
         return view
     }
 
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initViews()
         presenter = initPresenter(childFragmentManager, PodcastListPresenter::class.java)
@@ -93,7 +93,7 @@ class PodcastListFragment : AppFragment(), PodcastList.View {
             }
         }
         deleteFileSnackbar = Snackbar.make(podcast_list_fragment_recycler_view,
-                context.getString(R.string.deleted, originalTitle), Snackbar.LENGTH_INDEFINITE)
+                context!!.getString(R.string.deleted, originalTitle), Snackbar.LENGTH_INDEFINITE)
                 .addCallback(object : Snackbar.Callback() {
 
                     override fun onDismissed(snackbar: Snackbar?, event: Int) {

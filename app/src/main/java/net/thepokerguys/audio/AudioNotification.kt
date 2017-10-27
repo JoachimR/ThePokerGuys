@@ -4,7 +4,7 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.graphics.BitmapFactory
-import android.support.v7.app.NotificationCompat
+import android.support.v4.app.NotificationCompat
 import net.thepokerguys.R
 import net.thepokerguys.board.BoardFinder
 import net.thepokerguys.database.PodcastDatabaseItem
@@ -77,7 +77,7 @@ private fun createBuilder(context: Context, podcastDatabaseItem: PodcastDatabase
     }
 
     return NotificationCompat.Builder(context)
-            .setStyle(NotificationCompat.MediaStyle()
+            .setStyle(android.support.v4.media.app.NotificationCompat.MediaStyle()
                     .setShowActionsInCompactView(1))
             .setCategory(NotificationCompat.CATEGORY_TRANSPORT)
             .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
@@ -94,11 +94,8 @@ private fun createBuilder(context: Context, podcastDatabaseItem: PodcastDatabase
             as NotificationCompat.Builder
 }
 
-private fun pendingIntent(context: Context, url: String): PendingIntent? {
-    val uniqueRequestCode = Random().nextInt(100)
-    val contentPendingIntent = PendingIntent.getActivity(context, uniqueRequestCode,
-            PlayActivity.createIntent(context, url)
-                    .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP),
-            PendingIntent.FLAG_UPDATE_CURRENT)
-    return contentPendingIntent
-}
+private fun pendingIntent(context: Context, url: String) =
+        PendingIntent.getActivity(context, Random().nextInt(100),
+                PlayActivity.createIntent(context, url)
+                        .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP),
+                PendingIntent.FLAG_UPDATE_CURRENT)

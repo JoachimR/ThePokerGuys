@@ -46,7 +46,7 @@ class PlayActivity : AppActivity(), Play.View {
 
         presenter = initPresenter(supportFragmentManager)
 
-        val toolbar = findViewById(R.id.play_toolbar) as Toolbar
+        val toolbar = findViewById<Toolbar>(R.id.play_toolbar)
         setSupportActionBar(toolbar)
         val actionBar = supportActionBar
         actionBar?.setDisplayHomeAsUpEnabled(true)
